@@ -1,0 +1,65 @@
+//components
+@import "config";
+@import "../components/navbar/navbar";
+@import "../components/header/header";
+//pages
+@import "../pages/home";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  font-family: $primary-font;
+  color: $primeColor-darker;
+}
+
+.object-fit-cover {
+  object-fit: cover;
+  height: 125px;
+}
+
+.main-title1 {
+  font-size: 3rem;
+  color: $primeColor-darker;
+  padding: 7vh 0 3vh 0;
+}
+
+.secondary-link {
+  margin-top: 5vh;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 1.2rem;
+  display: inline-block;
+  padding-bottom: 2px;
+  position: relative;
+  color: $primeColor-darker;
+  width: 55px;
+  font-weight: 600;
+  text-transform: uppercase;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 2px solid $primeColor-darker;
+    transition: width 0.3s;
+  }
+  &:active {
+    color: $press-color;
+    &::before {
+      border-color: $hover-color;
+    }
+  }
+  &:hover {
+    color: $hover-color;
+    &::before {
+      width: 100%;
+      transition: width 0.3s;
+      border-color: $hover-color;
+    }
+  }
+}

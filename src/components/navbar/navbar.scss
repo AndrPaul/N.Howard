@@ -1,0 +1,213 @@
+.active-nav-link {
+  font-weight: 500;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid $primeColor-light;
+  }
+}
+
+.navbar {
+  height: 80px;
+  font-size: 1.3rem;
+  width: 100%;
+  position: absolute;
+  color: $primeColor-light;
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6%;
+    height: 80px;
+  }
+
+  .navbar-logo {
+    justify-self: start;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.7rem;
+    text-decoration: none;
+    height: 80px;
+    color: $primeColor-light;
+  }
+
+  .menu-icon {
+    display: none;
+
+    .nav-icon {
+      height: 35px;
+      width: 35px;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      .icon-line {
+        width: 25px;
+        height: 3px;
+        background: $primeColor-light;
+        margin-bottom: 3px;
+
+        &.close {
+          position: absolute;
+          margin-bottom: 0px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          &:first-of-type {
+            transform: rotate(-45deg);
+          }
+          &:nth-of-type(2) {
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    list-style: none;
+    text-align: center;
+    justify-content: end;
+
+    .nav-item {
+      display: flex;
+      align-items: center;
+      height: 80px;
+      padding-left: 60px;
+
+      .nav-link {
+        color: $primeColor-light;
+        text-decoration: none;
+        font-weight: 300;
+        font-size: 1rem;
+        display: inline-block;
+        padding-bottom: 2px;
+        position: relative;
+        &::before {
+          content: "";
+          position: absolute;
+          width: 0%;
+          height: 1px;
+          bottom: 0;
+          left: 0;
+          border-bottom: 1px solid $primeColor-light;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &::before {
+            width: 100%;
+            transition: width 0.3s;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .active-nav-link {
+    font-weight: 500;
+    color: $primeColor-darker;
+    &::after {
+      display: none;
+    }
+  }
+  .navbar {
+    &.active {
+      background: $primeColor-light;
+      color: $primeColor-darker;
+      z-index: 7;
+    }
+    .navbar-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(25%, 0%);
+      z-index: 6;
+      transition: all 0.3s ease-in;
+
+      &.active {
+        color: $primeColor-darker;
+      }
+    }
+
+    .menu-icon {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(-100%, 72%);
+      font-size: 1.8rem;
+      cursor: pointer;
+      z-index: 6;
+      &.active {
+        .nav-icon {
+          .icon-line {
+            background: $primeColor-darker;
+          }
+        }
+      }
+    }
+
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: -500%;
+      left: 0;
+
+      transition: all 0.3s ease-in;
+      grid-gap: 0px;
+      background-color: $primeColor-light;
+      &.active {
+        top: 80px;
+
+        z-index: 5;
+      }
+
+      .nav-item {
+        height:70px;
+        text-align: left;
+        padding-left: 0px;
+        width: 100%;
+
+        .nav-link {
+          text-align: center;
+          padding-left: 0px;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: $primeColor-dark;
+          height: 70px;
+
+          &:hover {
+            font-weight: 500;
+            color: $primeColor-darker;
+            &::before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .NavbarItems {
+    position: relative;
+  }
+}

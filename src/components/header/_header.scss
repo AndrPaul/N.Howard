@@ -1,0 +1,110 @@
+.header {
+  height: 96vh;
+  color: $primeColor-light;
+
+  &.home {
+    background: url(../../images/header/home.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  &.about {
+    background: url(../../images/header/about.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  &.portfolio {
+    background: url(../../images/header/portfolio.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  &.price {
+    background: url(../../images/header/price.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  &.contact {
+    background: url(../../images/header/contact.jpg) no-repeat center center;
+    background-size: cover;
+  }
+  .head-container {
+    height: 100%;
+    @include flexColCenter;
+    .head {
+      padding: 0 0 0 20%;
+      line-height: 1;
+      &.title {
+        font-size: 5rem;
+        font-weight: bold;
+      }
+      &.subtitle {
+        font-size: 3rem;
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+.social-head {
+  @include flexColCenter;
+  align-items: center;
+  width: 30px;
+  height: 75%;
+  position: absolute;
+  top: 120px;
+  font-size: 1.4rem;
+  left: 5.4%;
+
+  .social-icons-container {
+    @include flexColCenter;
+    height: 270px;
+    margin: 10% 0;
+    a {
+      padding: 7px;
+      color: $primeColor-light;
+    }
+  }
+
+  .social-line {
+    width: 2px;
+    height: 50%;
+    background: $primeColor-light;
+  }
+}
+@media screen and (max-width: 900px) {
+
+  .header{
+    .head-container {
+   
+      .head {
+        padding: 0 0 0 6%;
+        line-height: 1;
+        &.title {
+          font-size: 3.5rem;
+          font-weight: bold;
+        }
+        &.subtitle {
+          font-size: 2rem;
+          font-weight: 400;
+        }
+      }
+    }
+
+  }
+  
+  .social-head {
+    top: 350px;
+    left: 85%;
+    
+  
+    .social-icons-container {
+      @include flexColCenter;
+      height: 270px;
+      margin: 10% 0;
+      a {
+        padding: 7px;
+        color: $primeColor-light;
+      }
+    }
+  
+    .social-line {
+      display: none;
+    }
+  }
+
+}
