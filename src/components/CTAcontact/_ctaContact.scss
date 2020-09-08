@@ -1,0 +1,26 @@
+.cta-contact {
+    height: 40vh;
+    width: 100%;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(../../images/comp/cta-background.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+   
+    .cta-content{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+        .cta-title {
+            margin-right: 5%;
+            font-size: 1.6rem;
+        }
+    }
+   
+}

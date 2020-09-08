@@ -1,85 +1,56 @@
-.main {
-  margin: 20vh 5%;
-  img {
-    width: 100%;
-    height: 100%;
-  }
-  p {
-    line-height: 1.6;
-  }
-  @include flexColCenter;
-  align-items: center;
-  .main-container {
-    max-width: 1100px;
-    display: flex;
-    justify-content: space-between;
-
-    .main-content1 {
-      padding-right: 5%;
-      display: flex;
-      flex-direction: column;
-      text-align: left;
-      .main-image1 {
-        width: 320px;
-        height: 360px;
-        background: red;
-      }
-    }
-    .two-images-container {
-      position: relative;
-      .main-image3 {
-        width: 400px;
-        height: 660px;
-        background: red;
-      }
-      .main-image2 {
-        width: 240px;
-        height: 360px;
-        background: red;
-        position: absolute;
-        left: -47%;
-        top: 13%;
-      }
-    }
+.home-content1 {
+  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  .home-image1 {
+    width: 320px;
+    height: 360px;
+    background: red;
   }
 }
-
+.two-images-container {
+  position: relative;
+  .home-image3 {
+    width: 400px;
+    height: 660px;
+    background: red;
+  }
+  .home-image2 {
+    width: 240px;
+    height: 360px;
+    background: red;
+    position: absolute;
+    left: -47%;
+    top: 13%;
+  }
+}
+.home-title1 {
+  font-size: 3rem;
+  color: $primeColor-darker;
+  padding: 7vh 0 3vh 0;
+}
 @media screen and (max-width: 1033px) {
-  .main {
-    .main-container {
-      .main-content1 {
-        .main-image1 {
-        }
-      }
-      .two-images-container {
-        .main-image3 {
-        }
-        .main-image2 {
-          display: none;
-        }
-      }
+  .two-images-container {
+    .home-image2 {
+      display: none;
     }
   }
 }
 
 @media screen and (max-width: 900px) {
-    .main {
-        margin: 20vh 10%;
-      .main-container {
-        .main-content1 {
-            padding-right: 0;
-          .main-image1 {
-              width: 100%;
-          }
-        }
-        .two-images-container {
-          .main-image3 {
-              display: none;
-          }
-          .main-image2 {
-            display: none;
-          }
-        }
-      }
+  .home-content1 {
+    padding-right: 0;
+    .home-image1 {
+      width: 100%;
     }
   }
+  .two-images-container {
+    .home-image3 {
+      display: none;
+    }
+    .home-image2 {
+      display: none;
+    }
+  }
+}

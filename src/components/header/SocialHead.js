@@ -1,6 +1,6 @@
 import React from 'react'
 import {ImBehance, ImPinterest} from 'react-icons/im'
-import {Link} from "react-router-dom"
+
 import {FiInstagram} from 'react-icons/fi'
 const SocialHead = () => {
     return (

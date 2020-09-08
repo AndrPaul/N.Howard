@@ -41,7 +41,7 @@ const App = () => {
           <Route
             path="/portfolio"
             render={() => (
-              <About
+              <Portfolio
                 title={header.length > 0 ? header[0].portfolio.title : ""}
                 class={header.length > 0 ? header[0].portfolio.class : ""}
               />
@@ -50,7 +50,7 @@ const App = () => {
           <Route
             path="/price"
             render={() => (
-              <About
+              <Price
                 title={header.length > 0 ? header[0].price.title : ""}
                 class={header.length > 0 ? header[0].price.class : ""}
               />
@@ -59,7 +59,7 @@ const App = () => {
           <Route
             path="/contact"
             render={() => (
-              <About
+              <Contact
                 title={header.length > 0 ? header[0].contact.title : ""}
                 class={header.length > 0 ? header[0].contact.class : ""}
               />
