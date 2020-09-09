@@ -17,6 +17,7 @@
         align-items: center;
         justify-content: center;
         z-index: 99;
+        
         .cta-title {
             margin-right: 5%;
             font-size: 1.6rem;
@@ -24,3 +25,20 @@
     }
    
 }
+
+@media screen and (max-width: 900px) {
+    .cta-contact{
+        .cta-content{
+            @include flexColCenter;
+            text-align: center;
+            padding: 0 10%;
+            .cta-title {
+                margin-right: 0%;
+                margin-bottom: 15%;
+                font-size: 1.5rem;
+            }
+        }
+        
+    }
+  }
+  

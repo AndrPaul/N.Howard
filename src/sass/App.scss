@@ -3,6 +3,7 @@
 @import "../components/navbar/navbar";
 @import "../components/header/header";
 @import "../components/CTAcontact/ctaContact";
+@import "../components/homeGallery/homeGallery";
 //pages
 @import "../pages/home";
 
@@ -15,9 +16,22 @@
   font-family: $primary-font;
   color: $primeColor-darker;
 }
+.secondaryTitle {
+  font-size: 3rem;
+  color: $primeColor-darker;
+  font-weight: bolder;
+  &.home1 {
+    padding: 7vh 0 3vh 0;
+  }
+  &.home2 {
+    position: absolute;
 
+    right: 0;
+  }
+}
 .main {
   margin: 20vh 5%;
+
   img {
     width: 100%;
     height: 100%;
@@ -29,6 +43,7 @@
   align-items: center;
   .main-container {
     max-width: 1100px;
+
     display: flex;
     justify-content: space-between;
   }
@@ -44,8 +59,6 @@
   object-fit: cover;
 }
 
-
-
 .button {
   padding: 15px 55px;
   text-decoration: none;
@@ -58,6 +71,18 @@
   &.light {
     background: $primeColor-light;
     color: $primeColor-darker;
+    &:active {
+      background: $press-color;
+      color: $primeColor-light;
+    }
+    &:hover {
+      background: $hover-color;
+      color: $primeColor-light;
+    }
+  }
+  &.dark {
+    background: $primeColor-darker;
+    color: $primeColor-light;
     &:active {
       background: $press-color;
       color: $primeColor-light;
