@@ -7,12 +7,12 @@ function Navbar() {
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
-  const [width, setWidth] = React.useState(window.innerWidth);
+  const [width, setWidth] = useState(window.innerWidth);
   const breakpoint = 900;
   const styleMobile = { fontWeight: 600, color: '#333333' };
   const styleDesktop = { fontWeight: 300 };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth)
     window.addEventListener("resize", handleWindowResize);
 
