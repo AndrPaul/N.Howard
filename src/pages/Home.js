@@ -4,10 +4,12 @@ import {Link} from 'react-router-dom';
 import Header from "../components/header/Header";
 import CTAcontact from "../components/CTAcontact/CTAcontact"
 import HomeGallery from "../components/homeGallery/HomeGallery"
+import Feedback from "../components/Feedback/Feedback"
 //images
 import Photographer1 from "../images/home/photographer1.jpg";
 import PalmTree from '../images/home/palmtree.jpg';
 import Portrait1 from '../images/home/portrait1.jpg'
+import 'swiper/swiper-bundle.css'
 
 
 const Home = (props) => {
@@ -46,6 +48,7 @@ const Home = (props) => {
             </div>
             <CTAcontact greeting={ctaOne} />
             <HomeGallery/>
+            <Feedback />
             
         </div>
     );

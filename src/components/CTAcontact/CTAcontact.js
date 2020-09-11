@@ -1,6 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
-import CTAbackground from  '../../images/comp/cta-background.jpg'
+
 
 const CTAcontact = props => {
    

@@ -12,6 +12,7 @@ import Navbar from "./components/navbar/Navbar";
 import "./sass/App.scss";
 import { header } from "./headerData";
 
+
 const App = () => {
   return (
     <div className="app">

@@ -11,8 +11,9 @@ import GalleryInterior from '../../images/home/gallery/gallery-interior.jpg'
 import { Link } from "react-router-dom"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Pagination } from "swiper";
-import 'swiper/swiper-bundle.css'
+
 SwiperCore.use([Pagination]);
+//Imports
 const GalleryImgs = [
     { id: "1", src: GalleryProfile, alt: "side-profile" },
     { id: "2", src: GalleryArhitecture, alt: "arhitecture" },
@@ -27,6 +28,7 @@ const GalleryImgs = [
 const HomeGallery = () => {
     const [width, setWidth] = useState(window.innerWidth);
     const breakpoint = 800;
+
     useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth)
         window.addEventListener("resize", handleWindowResize);
@@ -42,6 +44,7 @@ const HomeGallery = () => {
             <div className="main-container home-portfolio">
                 <div className="home-content2">
                     <div className="galleryTitle-container">
+                       
                         <div className="secondaryTitle home2">Portfolio</div>
                     </div>
 
