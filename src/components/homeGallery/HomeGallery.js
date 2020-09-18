@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+
 //images
 import GalleryProfile from '../../images/home/gallery/gallery-profile.jpg'
 import GalleryArhitecture from '../../images/home/gallery/gallery-arhitecture.jpg'
@@ -9,11 +10,14 @@ import GalleryLandscape from '../../images/home/gallery/gallery-landscape.jpg'
 import GalleryInterior from '../../images/home/gallery/gallery-interior.jpg'
 //Components
 import { Link } from "react-router-dom"
-import { Swiper, SwiperSlide } from 'swiper/react'
-import SwiperCore, { Pagination } from "swiper";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore, { Pagination} from 'swiper';
+
+import 'swiper/swiper.scss';
 
 SwiperCore.use([Pagination]);
-//Imports
+
+//data
 const GalleryImgs = [
     { id: "1", src: GalleryProfile, alt: "side-profile" },
     { id: "2", src: GalleryArhitecture, alt: "arhitecture" },
@@ -38,21 +42,22 @@ const HomeGallery = () => {
     }, []);
 
 
-
     return (
         <div className="main">
             <div className="main-container home-portfolio">
                 <div className="home-content2">
-                    <div className="galleryTitle-container">
-                       
-                        <div className="secondaryTitle home2">Portfolio</div>
-                    </div>
 
-                    {width < breakpoint ?
-                        <Swiper pagination={{ clickable: true }} centeredSlides={true} spaceBetween={15} slidesPerView={3} >
+                    <div className="gallery-container">
+                        <div className="galleryTitle-container">
+
+                            <div className="secondaryTitle home2">Portfolio</div>
+                        </div>
+                        
+                        {width < breakpoint ?
+                        <Swiper pagination={{ clickable: true } } slidesPerView={1} spaceBetween={15}>
                             {GalleryImgs.map((item) => {
-                                return <SwiperSlide>
-                                    <img src={item.src} alt={item.alt} />
+                                return <SwiperSlide key={item.id}>
+                                    <img className="object-fit-cover"  src={item.src} alt={item.alt} />
                                 </SwiperSlide>;
                             })}
                         </Swiper>
@@ -66,11 +71,14 @@ const HomeGallery = () => {
                                 </div>
                             )
                         })}
-
-
-                    <div className="galleryBtn-container">
-                        <Link to="/portfolio" className="button dark">See All</Link>
+                        <div className="galleryBtn-container">
+                            <Link to="/portfolio" className="button dark">See All</Link>
+                        </div>
                     </div>
+
+
+
+
                 </div>
 
             </div>

@@ -7,6 +7,8 @@
 @import "../components/Feedback/feedback";
 //pages
 @import "../pages/home";
+@import "~slick-carousel/slick/slick.css"; 
+@import "~slick-carousel/slick/slick-theme.css";
 
 * {
   margin: 0;
@@ -16,7 +18,7 @@
 .app {
   font-family: $primary-font;
   color: $primeColor-darker;
-  overflow:hidden !important;
+ 
 }
 .secondaryTitle {
   font-size: 3rem;
@@ -25,13 +27,14 @@
   &.home1 {
     padding: 7vh 0 3vh 0;
   }
-  
+
   &.home3 {
     padding: 0vh 0 3vh 0;
   }
 }
 
-.swiper-pagination-bullet{
+.swiper-pagination-bullet {
+ 
   opacity: 1;
   background: none;
   border: 1px solid $primeColor-darker;
@@ -41,6 +44,7 @@
   background: $primeColor-darker;
 }
 .main {
+  display: flex;
   margin: 20vh 5%;
 
   img {
@@ -53,11 +57,11 @@
   @include flexColCenter;
   align-items: center;
   .main-container {
+    background: brown;
     max-width: 1100px;
-    
-    background: green;
+    height: auto;
+
     display: flex;
-   
   }
 }
 .overlay {
@@ -72,7 +76,11 @@
 }
 
 .button {
-  padding: 15px 55px;
+  width: 160px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
@@ -95,6 +103,7 @@
   &.dark {
     background: $primeColor-darker;
     color: $primeColor-light;
+
     &:active {
       background: $press-color;
       color: $primeColor-light;
@@ -145,8 +154,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .main {
-    margin: 20vh 10%;
+  .main-container{
+    width: 90vw;
   }
 }
-

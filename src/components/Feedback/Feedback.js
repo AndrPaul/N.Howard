@@ -7,16 +7,17 @@ const Feedback = () => {
     <div className="main">
       <div className="main-container">
           <div className="home-content3">
-          <div className="title-container">
+          <h1 className="secondaryTitle home3">Feedback</h1>
+          <div className="feedback-carousel">
             
-            <h1 className="secondaryTitle home3">Feedback</h1>
+          </div>
           </div>
           </div>
         
           
         
       </div>
-    </div>
+    
   );
 };
 
