@@ -57,6 +57,22 @@
     a {
       padding: 7px;
       color: $primeColor-light;
+
+      &:first-child{
+        &:hover{
+          color: #053eff;
+        }
+      }
+      &:nth-of-type(2){
+        &:hover{
+          color: #C13584;
+        }
+      }
+      &:last-of-type{
+        &:hover{
+          color: #bd081c;
+        }
+      }
     }
   }
 
@@ -67,10 +83,8 @@
   }
 }
 @media screen and (max-width: 900px) {
-
-  .header{
+  .header {
     .head-container {
-   
       .head {
         padding: 0 0 0 6%;
         line-height: 1;
@@ -84,14 +98,12 @@
         }
       }
     }
-
   }
-  
+
   .social-head {
     top: 350px;
     left: 85%;
-    
-  
+
     .social-icons-container {
       @include flexColCenter;
       height: 270px;
@@ -101,10 +113,9 @@
         color: $primeColor-light;
       }
     }
-  
+
     .social-line {
       display: none;
     }
   }
-
 }

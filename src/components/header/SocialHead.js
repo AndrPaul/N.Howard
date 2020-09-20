@@ -7,9 +7,9 @@ const SocialHead = () => {
         <div className="social-head">
             <div className="social-line"></div>
             <div className="social-icons-container">
-            <a href="#"><ImBehance/></a>    
-            <a href="#"><FiInstagram/></a>
-            <a href="#"><ImPinterest/></a>
+            <a href="#" className="behance"><ImBehance/></a>    
+            <a href="#" className="instagram"><FiInstagram/></a>
+            <a href="#" className="pinterest"><ImPinterest/></a>
             
            
             </div>

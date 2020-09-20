@@ -11,6 +11,7 @@ import Price from "./pages/Price";
 import Navbar from "./components/navbar/Navbar";
 import "./sass/App.scss";
 import { header } from "./headerData";
+import Footer from "./components/footer/Footer"
 
 
 const App = () => {
@@ -67,7 +68,8 @@ const App = () => {
             )}
           />
         </Switch>
-      </Router>
+        <Footer/>
+        </Router>
     </div>
   );
 };
