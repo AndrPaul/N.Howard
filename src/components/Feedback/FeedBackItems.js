@@ -1,27 +1,41 @@
+import Emily from '../../images/home/feedback/emily.jpg'
+import Natalie from '../../images/home/feedback/natalie.jpg'
+import Michael from '../../images/home/feedback/michael.jpg'
+import Aubrey from '../../images/home/feedback/aubrey.jpg'
+import Ryan from '../../images/home/feedback/ryan.jpg'
+
 export const FeedBackItems = [
     {
-        title: "Home",
-        url: '/',
-        name: "Emily"
+        id: "1", src: Emily,
+        text:
+            "Proin in velit condimentum, rutrum metus vitae, varius nibh. Donec in purus lobortis, scelerisque sem sit amet, tempor leo. Aenean dapibus turpis eget lorem fringilla, eget placerat quam malesuada. Duis tristique scelerisque tortor a rhoncus. Nullam nulla est, aliquam et elementum vitae, dapibus ac orci.",
+
+        name: "Emily",
     },
     {
-        title: "About",
-        url: '/about',
-        cName: 'Natalie',
+        id: "2", src: Natalie,
+        text:
+            "Proin in velit condimentum, rutrum metus vitae, varius nibh. Donec in purus lobortis, scelerisque sem sit amet, tempor leo. Aenean dapibus turpis eget lorem fringilla, eget placerat quam malesuada. Duis tristique scelerisque tortor a rhoncus. Nullam nulla est, aliquam et elementum vitae, dapibus ac orci.",
+
+        name: "Natalie",
     },
     {
-        title: "Portfolio",
-        url: '/portfolio',
-        cName: 'Michael',
+        id: "3", src: Michael,
+        text:
+            "Proin in velit condimentum, rutrum metus vitae, varius nibh. Donec in purus lobortis, scelerisque sem sit amet, tempor leo. Aenean dapibus turpis eget lorem fringilla, eget placerat quam malesuada. Duis tristique scelerisque tortor a rhoncus. Nullam nulla est, aliquam et elementum vitae, dapibus ac orci.",
+
+        name: "Michael",
     },
     {
-        title: "Price",
-        url: '/price',
-        cName: 'Aubrey'
+        id: "4", src: Aubrey,
+        text:
+            "Proin in velit condimentum, rutrum metus vitae, varius nibh. Donec in purus lobortis, scelerisque sem sit amet, tempor leo. Aenean dapibus turpis eget lorem fringilla, eget placerat quam malesuada. Duis tristique scelerisque tortor a rhoncus. Nullam nulla est, aliquam et elementum vitae, dapibus ac orci.",
+        name: "Aubrey",
     },
     {
-        title: "Contact",
-        url: '/contact',
-        cName: 'Ryan'
+        id: "5", src: Ryan,
+        text:
+            "Proin in velit condimentum, rutrum metus vitae, varius nibh. Donec in purus lobortis, scelerisque sem sit amet, tempor leo. Aenean dapibus turpis eget lorem fringilla, eget placerat quam malesuada. Duis tristique scelerisque tortor a rhoncus. Nullam nulla est, aliquam et elementum vitae, dapibus ac orci.",
+        name: "Ryan",
     },
-]
+];

@@ -16,7 +16,6 @@ import SwiperCore, { Pagination} from 'swiper';
 import 'swiper/swiper.scss';
 
 SwiperCore.use([Pagination]);
-
 //data
 const GalleryImgs = [
     { id: "1", src: GalleryProfile, alt: "side-profile" },
