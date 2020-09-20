@@ -1,15 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-$primary-font: 'Poppins', sans-serif;
-$primeColor-light: #FFFFFF;
+$primary-font: "Poppins", sans-serif;
+$primeColor-light: #ffffff;
+
 $primeColor-dark: #545454;
 $primeColor-darker: #333333;
-$hover-color: #EA4FE7;
-$press-color: #BF35BC;
+$hover-color: #ea4fe7;
+$press-color: #bf35bc;
+$secondaryColor-dark: darken($primeColor-light, 7%);
+$secondaryColor-darker: darken($primeColor-light, 20%);
+
+$boxShadow: 0px 3px 4px 0px rgba($primeColor-darker, 0.1);
 
 @mixin flexColCenter {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
+@mixin boxShadow {
+  box-shadow: $boxShadow;
+  -webkit-box-shadow: $boxShadow;
+  -moz-box-shadow: $boxShadow;
 }

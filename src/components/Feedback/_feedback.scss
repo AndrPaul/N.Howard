@@ -49,6 +49,10 @@
 
 @media screen and (max-width: 800px) {
   .home-content3 {
+
+    .title-container {
+      justify-content: center;
+    }
     .swiper-container {
       height: 670px;
     }

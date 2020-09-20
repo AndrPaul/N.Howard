@@ -4,7 +4,8 @@ import {Link} from 'react-router-dom';
 import Header from "../components/header/Header";
 import CTAcontact from "../components/CTAcontact/CTAcontact"
 import HomeGallery from "../components/homeGallery/HomeGallery"
-import Feedback from "../components/Feedback/Feedback"
+import Feedback from "../components/feedback/Feedback"
+import HomeBlog from "../components/blog/HomeBlog"
 //images
 import Photographer1 from "../images/home/photographer1.jpg";
 import PalmTree from '../images/home/palmtree.jpg';
@@ -49,6 +50,7 @@ const Home = (props) => {
             <CTAcontact greeting={ctaOne} />
             <HomeGallery/>
             <Feedback />
+            <HomeBlog />
             
         </div>
     );
